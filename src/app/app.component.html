@@ -1,2 +1,4 @@
-<cms-header></cms-header>
-<cms-contacts></cms-contacts>
+<cms-header (featureSelected)="onNavigate($event)"></cms-header>
+<cms-documents *ngIf="loadedFeature === 'documents'"></cms-documents>
+<cms-contacts *ngIf="loadedFeature === 'contacts'"></cms-contacts>
+<cms-message-list *ngIf="loadedFeature === 'messages'"></cms-message-list>
