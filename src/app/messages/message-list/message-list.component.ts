@@ -13,9 +13,9 @@ import { CommonModule } from '@angular/common';
 })
 export class MessageListComponent {
   messages: Message[] = [
-    new Message('1', 'Meeting Reminder', 'Don’t forget the team meeting at 10 AM.', 'John Doe'),
-    new Message('2', 'Project Update', 'The project deadline has been extended to next Friday.', 'Jane Smith'),
-    new Message('3', 'Lunch Plans', 'Let’s meet at the cafeteria at 12:30 PM.', 'Alice Johnson')
+    new Message('1', 'Ajde', 'I sve pare sveta da mi ponude', 'Novak Djokovic'),
+    new Message('2', 'Sta ima buraz', 'Sta se radi buraz', 'Nikola Tesla'),
+    new Message('3', 'Ide gas bre', 'A jel ima prase u gradu', 'Nikola Jokic')
   ];
 
   onAddMessage(newMessage: Message) {
