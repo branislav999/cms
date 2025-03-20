@@ -5,20 +5,17 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { CommonModule } from '@angular/common';
 import { MessageListComponent } from './messages/message-list/message-list.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'cms-root',
-  imports: [CommonModule, HeaderComponent, ContactsComponent, DocumentsComponent, MessageListComponent],
+  imports: [CommonModule, HeaderComponent, RouterModule],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'cms';
-  loadedFeature = 'contacts';
 
 
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
 }

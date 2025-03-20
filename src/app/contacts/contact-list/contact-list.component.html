@@ -1,13 +1,15 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Contacts</h3>
-    <a href="#" class="btn btn-primary">New Contact</a>
+    <a [routerLink]="['/contacts/new']" class="btn btn-primary">New Contact</a>
   </div>
   <div class="panel-body">
     <ul class="list-group">
-      <cms-contact-item *ngFor="let contactEl of contacts" [contact]="contactEl"
-      (selectedContactEvent)="onSelected(contactEl)"
-      ></cms-contact-item>
+      <li *ngFor="let contact of contacts" class="list-group-item">
+        <a [routerLink]="['/contacts', contact.id]" routerLinkActive="active">
+          {{ contact.name }} 
+        </a>
+      </li>
     </ul>
   </div>
 </div>

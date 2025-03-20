@@ -4,10 +4,11 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { CommonModule } from '@angular/common';
 import { ContactService } from './contact.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'cms-contacts',
-  imports: [CommonModule, ContactDetailComponent, ContactListComponent],
+  imports: [CommonModule, ContactListComponent, RouterModule],
   templateUrl: './contacts.component.html',
   styleUrl: './contacts.component.css'
 })
